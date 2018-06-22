@@ -1,0 +1,171 @@
+@import './common.less';
+html,
+body {
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Hiragino Sans GB',
+    'Microsoft YaHei', '\5FAE\8F6F\96C5\9ED1', Arial, sans-serif;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body video {
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+  transition: color @animate-duration @ease-out;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: @title-color;
+}
+
+#react-content {
+  width: 100%;
+  overflow: hidden;
+}
+
+#page-404 {
+  min-height: 680px;
+  text-align: center;
+  padding-top: 10%;
+  color: #999;
+  & h1 {
+    text-shadow: -1px -1px 4px #666;
+    font-size: 200px;
+  }
+}
+
+// 修改 nprogress load 色
+#nprogress {
+  & .bar {
+    background: @primary-color;
+  }
+  & .peg {
+    box-shadow: 0 0 10px @primary-color, 0 0 5px @primary-color;
+  }
+  & .spinner-icon {
+    border-top-color: @primary-color;
+    border-left-color: @primary-color;
+  }
+}
+.content-wrapper > .tween-one-leaving,
+.queue-anim-leaving {
+  position: absolute !important;
+  width: 100%;
+}
+
+.video {
+  max-width: 800px;
+}
+
+.templates-wrapper {
+  user-select: none;
+}
+
+.is-edit {
+  * {
+    pointer-events: none;
+  }
+}
+
+#react-content {
+  min-height: 100%;
+}
+@content: content-template;
+.@{content}-wrapper {
+  width: 100%;
+  background: #fff;
+  height: 100vh;
+  border-color: #666;
+  position: relative;
+  // min-height: 685px;
+  // align-items: center;
+  // display: flex;
+  .@{content} {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    h1 {
+      font-size: 32px;
+      font-weight: normal;
+      color: #404040;
+      line-height: 48px;
+    }
+    > p {
+      font-size: 12px;
+      margin: 20px auto;
+    }
+  }
+}
+
+.content-half-wrapper {
+  height: 50vh;
+  // min-height: 342px;
+}
+
+@media screen and (max-width: 767px) {
+  .@{content}-wrapper {
+    .@{content} {
+      // width: 90%;
+      h1 {
+        font-size: 24px;
+      }
+      /*h1, > p {
+        text-align: center;
+      }*/
+    }
+  }
+}
